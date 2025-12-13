@@ -18,7 +18,7 @@ function App() {
   return (
     <>
      <NavBar />
-      <div className="min-h-screen flex flex-col justify-center bg-zinc-900 text-white">
+      <div className="min-h-screen flex flex-col justify-center bg-zinc-500 text-white">
        
         <Routes>
           <Route path="/" element={<HomePage />} />

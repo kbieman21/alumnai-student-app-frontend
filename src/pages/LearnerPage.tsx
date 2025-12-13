@@ -1,6 +1,317 @@
-import React from "react";
+// import React, { useState } from "react";
+
+// export default function LearnerPage() {
+//   const [showAI, setShowAI] = useState(false);
+//   const [showFakeAI, setShowFakeAI] = useState(false);
+
+//   const [aiResponse, setAiResponse] = useState("");
+//   const [loading, setLoading] = useState(false);
+
+//   const [useLiveAI, setUseLiveAI] = useState(false);
+
+//   const DEMO_MODE = true; // false = live OpenAI
+
+
+//    const handleAIHelp = () => {
+//     if (DEMO_MODE) {
+//       setShowFakeAI(true);
+//     } else {
+//       getLiveAIHelp();
+//     }
+//   };
+
+// //   const getAIHelp = async () => {
+// //     setLoading(true);
+
+// //     const response = await fetch("https://api.openai.com/v1/chat/completions", {
+// //       method: "POST",
+// //       headers: {
+// //         "Content-Type": "application/json",
+// //         Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+// //       },
+// //       body: JSON.stringify({
+// //         model: "gpt-4o-mini",
+// //         messages: [
+// //           {
+// //             role: "system",
+// //             content: "You are a helpful tutor for Per Scholas learners.",
+// //           },
+// //           {
+// //             role: "user",
+// //             content: "Explain JavaScript loops simply with one example.",
+// //           },
+// //         ],
+// //       }),
+// //     });
+
+// //     const data = await response.json();
+// //     setAiResponse(data.choices[0].message.content);
+// //     setLoading(false);
+// //   };
+
+// const getLiveAIHelp = async () => {
+//     setLoading(true);
+//     setAiResponse("");
+
+//     try {
+//       const response = await fetch(
+//         "https://api.openai.com/v1/chat/completions",
+//         {
+//           method: "POST",
+//           headers: {
+//             "Content-Type": "application/json",
+//             Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+//           },
+//           body: JSON.stringify({
+//             model: "gpt-4o-mini",
+//             messages: [
+//               {
+//                 role: "system",
+//                 content:
+//                   "You are a helpful and supportive tutor for Per Scholas learners. Explain concepts simply.",
+//               },
+//               {
+//                 role: "user",
+//                 content:
+//                   "Explain JavaScript loops simply and give one short example.",
+//               },
+//             ],
+//           }),
+//         }
+//       );
+
+//       const data = await response.json();
+//       setAiResponse(data.choices[0].message.content);
+//     } catch (error) {
+//       setAiResponse("AI is currently unavailable. Please try again later.");
+//     }
+
+//     setLoading(false);
+//   };
+
+//   return (
+//     <div style={styles.page}>
+//       <h1>Welcome back, Learner 👋</h1>
+//       <p>Get fast help from AI and Per Scholas alumni tutors.</p>
+
+//       {/* Request Help */}
+//       <section style={styles.card}>
+//         <h2>Get Help Now</h2>
+
+//         <label>Topic / Skill</label>
+//         <select style={styles.input}>
+//           <option>JavaScript</option>
+//           <option>Python</option>
+//           <option>IT Support</option>
+//           <option>AWS</option>
+//           <option>Cybersecurity</option>
+//         </select>
+
+//         <label>Difficulty Level</label>
+//         <select style={styles.input}>
+//           <option>Beginner</option>
+//           <option>Intermediate</option>
+//           <option>Advanced</option>
+//         </select>
+
+//         <label>Describe Your Question</label>
+//         <textarea
+//           style={styles.textarea}
+//           placeholder="I’m struggling to understand JavaScript loops and how to use them in projects."
+//         />
+
+//         <div style={styles.buttonRow}>
+//           {/* <button style={styles.primaryBtn}>Get AI Help</button> */}
+//           {/* <button style={styles.primaryBtn} onClick={() => setShowAI(true)}>
+//             Get AI Help
+//           </button> */}
+//           {/* <button style={styles.primaryBtn} onClick={getAIHelp}>
+//             Get AI Help (Live AI)
+//           </button> */}
+//           {/* <button onClick={() => setUseLiveAI(!useLiveAI)}>
+//             {useLiveAI ? "Use Demo AI" : "Use Live AI"}
+//           </button> */}
+
+//            {/* { onClick={useLiveAI ? getAIHelp : () => setShowAI(true)}} */}
+
+//           {loading && <p>AI is thinking...</p>}
+
+//           {aiResponse && (
+//             <section style={styles.card}>
+//               <h2>AI Study Assistant 🤖</h2>
+//               <p>{aiResponse}</p>
+//             </section>
+//           )}
+
+//           <button style={styles.secondaryBtn}>Request a Tutor</button>
+//         </div>
+//       </section>
+
+//       {/* AI Study Assistant */}
+//       {/* <section style={styles.card}>
+//         <h2>AI Study Assistant 🤖</h2>
+//         <p>
+//           <strong>Suggested Explanation:</strong>
+//         </p>
+//         <p>
+//           A loop allows you to repeat a block of code until a condition is met.
+//           Common JavaScript loops include <code>for</code> and{" "}
+//           <code>while</code>.
+//         </p>
+
+//         <p>
+//           <strong>Helpful Resources:</strong>
+//         </p>
+//         <ul>
+//           <li>Short concept summary</li>
+//           <li>Example code snippet</li>
+//           <li>Practice challenge</li>
+//         </ul>
+
+//         <p>
+//           <strong>Recommended Next Step:</strong>
+//         </p>
+//         <p>Schedule a 30-minute session with a JavaScript tutor.</p>
+//       </section> */}
+
+//       {showAI && (
+//         <section style={styles.card}>
+//           <h2>AI Study Assistant 🤖</h2>
+//           <p>
+//             <strong>Suggested Explanation:</strong>
+//           </p>
+//           <p>
+//             A loop allows you to repeat a block of code until a condition is
+//             met. Common JavaScript loops include <code>for</code> and{" "}
+//             <code>while</code>.
+//           </p>
+
+//           <p>
+//             <strong>Helpful Resources:</strong>
+//           </p>
+//           <ul>
+//             <li>Short concept summary</li>
+//             <li>Example code snippet</li>
+//             <li>Practice challenge</li>
+//           </ul>
+
+//           <p>
+//             <strong>Recommended Next Step:</strong>
+//           </p>
+//           <p>Schedule a 30-minute session with a JavaScript tutor.</p>
+//         </section>
+//       )}
+
+//       {/* Recommended Tutors */}
+//       <section style={styles.card}>
+//         <h2>Recommended Tutors</h2>
+
+//         <div style={styles.tutorCard}>
+//           <p>
+//             <strong>Alex R.</strong> — JavaScript
+//           </p>
+//           <p>Alumni · Software Engineer</p>
+//           <p>⭐ 5.0 | 🏅 Top Mentor</p>
+//           <button style={styles.primaryBtn}>Request Session</button>
+//         </div>
+//       </section>
+
+//       {/* Progress */}
+//       <section style={styles.card}>
+//         <h2>Your Learning Progress</h2>
+//         <p>Sessions Completed: 3</p>
+//         <p>Topics Mastered: JavaScript Basics</p>
+//         <p>Level: Explorer 🌱</p>
+//         <p>Points Earned: 120</p>
+//       </section>
+//     </div>
+//   );
+// }
+
+// const styles = {
+//   page: { padding: "20px", fontFamily: "Arial" },
+//   card: {
+//     background: "gray",
+//     padding: "15px",
+//     marginBottom: "20px",
+//     borderRadius: "8px",
+//   },
+//   input: { width: "100%", padding: "8px", marginBottom: "10px" ,background:"gray" },
+//   textarea: { width: "100%", height: "80px", padding: "8px" },
+//   buttonRow: { display: "flex", gap: "10px", marginTop: "10px" },
+//   primaryBtn: {
+//     padding: "10px",
+//     background: "#4CAF50",
+//     color: "white",
+//     border: "none",
+//     borderRadius: "5px",
+//   },
+//   secondaryBtn: {
+//     padding: "10px",
+//     background: "#ddd",
+//     border: "none",
+//     borderRadius: "5px",
+//   },
+//   tutorCard: { padding: "10px", background: "gray", borderRadius: "5px" },
+// };
+
+import React, { useState } from "react";
+
+const DEMO_MODE = true; // 🔁 CHANGE TO false FOR LIVE OPENAI
 
 export default function LearnerPage() {
+  const [showFakeAI, setShowFakeAI] = useState(false);
+  const [aiResponse, setAiResponse] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleAIHelp = () => {
+    if (DEMO_MODE) {
+      setShowFakeAI(true);
+    } else {
+      getLiveAIHelp();
+    }
+  };
+
+  const getLiveAIHelp = async () => {
+    setLoading(true);
+    setAiResponse("");
+
+    try {
+      const response = await fetch(
+        "https://api.openai.com/v1/chat/completions",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
+          },
+          body: JSON.stringify({
+            model: "gpt-4o-mini",
+            messages: [
+              {
+                role: "system",
+                content:
+                  "You are a helpful and supportive tutor for Per Scholas learners. Explain concepts simply.",
+              },
+              {
+                role: "user",
+                content:
+                  "Explain JavaScript loops simply and give one short example.",
+              },
+            ],
+          }),
+        }
+      );
+
+      const data = await response.json();
+      setAiResponse(data.choices[0].message.content);
+    } catch (error) {
+      setAiResponse("AI is currently unavailable. Please try again later.");
+    }
+
+    setLoading(false);
+  };
+
   return (
     <div style={styles.page}>
       <h1>Welcome back, Learner 👋</h1>
@@ -32,49 +343,56 @@ export default function LearnerPage() {
           placeholder="I’m struggling to understand JavaScript loops and how to use them in projects."
         />
 
-        <div style={styles.buttonRow}>
-          <button style={styles.primaryBtn}>Get AI Help</button>
-          <button style={styles.secondaryBtn}>Request a Tutor</button>
-        </div>
+        <button style={styles.primaryBtn} onClick={handleAIHelp}>
+          Get AI Help
+        </button>
       </section>
 
-      {/* AI Study Assistant */}
+      {/* Demo AI Response */}
+      {showFakeAI && (
+        <section style={styles.card}>
+          <h2>AI Study Assistant 🤖</h2>
+          <p>
+            A loop allows you to repeat a block of code until a condition is met.
+            In JavaScript, a <code>for</code> loop is commonly used to run code a
+            specific number of times.
+          </p>
+          <pre style={styles.codeBlock}>
+{`for (let i = 0; i < 5; i++) {
+  console.log(i);
+}`}
+          </pre>
+          <p>
+            <strong>Next Step:</strong> Practice writing a loop that prints
+            numbers from 1 to 10.
+          </p>
+        </section>
+      )}
+
+      {/* Live AI Response */}
+      {loading && <p>AI is thinking...</p>}
+
+      {aiResponse && (
+        <section style={styles.card}>
+          <h2>AI Study Assistant 🤖</h2>
+          <p>{aiResponse}</p>
+        </section>
+      )}
+
+      {/* Recommended Tutor */}
       <section style={styles.card}>
-        <h2>AI Study Assistant 🤖</h2>
-        <p><strong>Suggested Explanation:</strong></p>
+        <h2>Recommended Tutor</h2>
         <p>
-          A loop allows you to repeat a block of code until a condition is met.
-          Common JavaScript loops include <code>for</code> and <code>while</code>.
+          <strong>Alex R.</strong> — JavaScript Alumni Tutor
         </p>
-
-        <p><strong>Helpful Resources:</strong></p>
-        <ul>
-          <li>Short concept summary</li>
-          <li>Example code snippet</li>
-          <li>Practice challenge</li>
-        </ul>
-
-        <p><strong>Recommended Next Step:</strong></p>
-        <p>Schedule a 30-minute session with a JavaScript tutor.</p>
-      </section>
-
-      {/* Recommended Tutors */}
-      <section style={styles.card}>
-        <h2>Recommended Tutors</h2>
-
-        <div style={styles.tutorCard}>
-          <p><strong>Alex R.</strong> — JavaScript</p>
-          <p>Alumni · Software Engineer</p>
-          <p>⭐ 5.0 | 🏅 Top Mentor</p>
-          <button style={styles.primaryBtn}>Request Session</button>
-        </div>
+        <p>⭐ 5.0 | 🏅 Top Mentor</p>
+        <button style={styles.secondaryBtn}>Request Session</button>
       </section>
 
       {/* Progress */}
       <section style={styles.card}>
         <h2>Your Learning Progress</h2>
         <p>Sessions Completed: 3</p>
-        <p>Topics Mastered: JavaScript Basics</p>
         <p>Level: Explorer 🌱</p>
         <p>Points Earned: 120</p>
       </section>
@@ -83,12 +401,48 @@ export default function LearnerPage() {
 }
 
 const styles = {
-  page: { padding: "20px", fontFamily: "Arial" },
-  card: { background: "black", padding: "15px", marginBottom: "20px", borderRadius: "8px" },
-  input: { width: "100%", padding: "8px", marginBottom: "10px" },
-  textarea: { width: "100%", height: "80px", padding: "8px" },
-  buttonRow: { display: "flex", gap: "10px", marginTop: "10px" },
-  primaryBtn: { padding: "10px", background: "#4CAF50", color: "white", border: "none", borderRadius: "5px" },
-  secondaryBtn: { padding: "10px", background: "#ddd", border: "none", borderRadius: "5px" },
-  tutorCard: { padding: "10px", background: "white", borderRadius: "5px" }
+  page: {
+    padding: "20px",
+    fontFamily: "Arial, sans-serif",
+  },
+  card: {
+    background: "black",
+    padding: "15px",
+    marginBottom: "20px",
+    borderRadius: "8px",
+  },
+  input: {
+    width: "100%",
+    padding: "8px",
+    marginBottom: "10px",
+  },
+  textarea: {
+    width: "100%",
+    height: "80px",
+    padding: "8px",
+    marginBottom: "10px",
+  },
+  primaryBtn: {
+    padding: "10px 15px",
+    background: "#4CAF50",
+    color: "black",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+  },
+  secondaryBtn: {
+    padding: "8px 12px",
+    background: "green",
+    border: "none",
+    borderRadius: "5px",
+    cursor: "pointer",
+  },
+  codeBlock: {
+    background: "#222",
+    color: "#0f0",
+    padding: "10px",
+    borderRadius: "5px",
+    fontSize: "14px",
+    marginTop: "10px",
+  },
 };

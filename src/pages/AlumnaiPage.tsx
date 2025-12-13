@@ -59,7 +59,7 @@ export default function TutorPage() {
 
 const styles = {
   page: { padding: "20px", fontFamily: "Arial" },
-  card: { background: "black", padding: "15px", marginBottom: "20px", borderRadius: "8px" },
+  card: { background: "gray", padding: "15px", marginBottom: "20px", borderRadius: "8px" },
   requestCard: { background: "white", padding: "10px", borderRadius: "5px" },
   buttonRow: { display: "flex", gap: "10px", marginTop: "10px" },
   primaryBtn: { padding: "10px", background: "#4CAF50", color: "white", border: "none", borderRadius: "5px" },

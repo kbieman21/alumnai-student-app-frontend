@@ -58,7 +58,7 @@ export default function AdminPage() {
 
 const styles = {
   page: { padding: "20px", fontFamily: "Arial" },
-  card: { background: "#balck", padding: "15px", marginBottom: "20px", borderRadius: "8px" },
+  card: { background: "gray", padding: "15px", marginBottom: "20px", borderRadius: "8px" },
   primaryBtn: { padding: "10px", marginRight: "10px", background: "#4CAF50", color: "white", border: "none", borderRadius: "5px" },
   secondaryBtn: { padding: "10px", background: "#ddd", border: "none", borderRadius: "5px" }
 };
