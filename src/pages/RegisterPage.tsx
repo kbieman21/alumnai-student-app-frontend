@@ -23,6 +23,7 @@ function RegisterPage() {
         <input name="username" placeholder="Username" onChange={handleChange} required className="w-full p-3 border rounded"/>
         <input name="email" placeholder="Email" onChange={handleChange} required className="w-full p-3 border rounded"/>
         <input type="password" name="password" placeholder="Password" onChange={handleChange} required className="w-full p-3 border rounded"/>
+         <input type="role" name="role" placeholder="Role" onChange={handleChange} required className="w-full p-3 border rounded"/>
 
         <button className="w-full p-3 bg-green-600 text-white rounded" type="submit">
           Register
