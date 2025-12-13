@@ -8,7 +8,7 @@ function HomePage() {
       <h1 className="text-5xl font-bold mb-4">Project Manager App</h1>
 
       <p className="text-gray-300 text-lg mb-8">
-        Organize your projects and tasks with ease. New users please register; or login if you have an account.
+      Hello placeholder
       </p>
 
      <div className="space-x-4">
