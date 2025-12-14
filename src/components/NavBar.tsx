@@ -29,7 +29,7 @@ function NavBar() {
             Home
           </NavLink>
 
-          <NavLink
+          {/* <NavLink
             to="/projects"
             className={({ isActive }) =>
               `hover:text-sky-400 transition ${
@@ -38,7 +38,7 @@ function NavBar() {
             }
           >
             Projects
-          </NavLink>
+          </NavLink> */}
         </div>
 
         {/* Right side — Login/Logout */}
