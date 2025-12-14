@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
+import logo from "../assets/perscholas.png";
 
 
 function NavBar() {
@@ -10,36 +11,13 @@ function NavBar() {
     <nav className="w-full bg-zinc-900 text-white px-6 py-10 shadow-md">
       <div className="max-w-6xl mx-auto flex items-center justify-between">
         {/* Left side — Logo */}
-        {/* <div className="text-xl font-bold tracking-wide">
+        <div className="text-xl font-bold tracking-wide">
           <NavLink to="/" className="hover:text-sky-400 transition">
            <img src={logo} alt="Logo" className="h-10 w-auto" />
           </NavLink>
-        </div> */}
-
-        {/* Middle links */}
-        <div className="flex gap-6 text-lg">
-          <NavLink
-            to="/"
-            className={({ isActive }) =>
-              `hover:text-sky-400 transition ${
-                isActive ? "text-sky-400 font-semibold" : ""
-              }`
-            }
-          >
-            Home
-          </NavLink>
-
-          {/* <NavLink
-            to="/projects"
-            className={({ isActive }) =>
-              `hover:text-sky-400 transition ${
-                isActive ? "text-sky-400 font-semibold" : ""
-              }`
-            }
-          >
-            Projects
-          </NavLink> */}
         </div>
+
+        
 
         {/* Right side — Login/Logout */}
         <div>
