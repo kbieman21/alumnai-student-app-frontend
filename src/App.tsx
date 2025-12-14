@@ -30,9 +30,9 @@ function App() {
           <Route path="/learner" element={<LearnerPage />} />
           <Route path="/tutor" element={<AlumnaiPage />} />
           <Route path="/admin" element={<AdminPage />} />
-           <Route path="/confirm" element={<RquestConfirmPage />} />
-           <Route path="/sessionaccept" element={<SessionAccepted />} />  
-            <Route path="/postsession" element={<PostSessionSummary />} /> 
+          <Route path="/confirm" element={<RquestConfirmPage />} />
+          <Route path="/sessionaccept" element={<SessionAccepted />} />  
+          <Route path="/postsession" element={<PostSessionSummary />} /> 
 
           <Route path='/projects' element={
             <AuthenticatedRoute>

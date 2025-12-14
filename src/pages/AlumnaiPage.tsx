@@ -32,7 +32,7 @@ export default function TutorPage() {
           </p>
           <div style={styles.buttonRow}className="ml-115">
             <button onClick={()=>{
-                navigate("/session")
+                navigate("/sessionaccept")
             }}  style={styles.primaryBtn} >Accept Session</button>
             <button onClick={()=>{
                 alert('Session Declined');
