@@ -105,25 +105,14 @@ const styles = {
 	},
 	secondaryBtn: {
 		padding: "10px",
-<<<<<<< HEAD
-=======
-		background: "red",
->>>>>>> 25d208987e54420524cc5bca6dc4952b37f56050
 		border: "none",
 		borderRadius: "5px",
     margin: "5px"
 	},
 	thirdBTn: {
 		padding: "10px",
-<<<<<<< HEAD
 		border: "none",
 		borderRadius: "5px",
 		background: "yellow"
-=======
-		background: "blue",
-		border: "none",
-		borderRadius: "5px",
-		
->>>>>>> 25d208987e54420524cc5bca6dc4952b37f56050
 	},
 };
