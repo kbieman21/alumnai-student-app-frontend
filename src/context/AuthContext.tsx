@@ -43,15 +43,25 @@ export default function AuthProvider({ children }: AuthProviderProps) {
     // save token and user
     localStorage.setItem('token', token)
     localStorage.setItem('user', JSON.stringify(user))
+    localStorage.setItem('role', user.role)
     
     setUser(user);
     setIsAuthenticated(true);
-    navigate("/projects");
+   
+    // Role-based redirect
+  if (user.role === "admin") {
+    navigate("/admin");
+  } else if (user.role === "tutor") {
+    navigate("/tutor");
+  } else {
+    navigate("/learner");
+  }
   };
 
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
+    localStorage.removeItem("role");
     setUser(null!);
     setIsAuthenticated(false);
     navigate('/')

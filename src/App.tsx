@@ -12,6 +12,7 @@ import RquestConfirmPage from "./pages/RequestConfirmPage";
 import SessionAccepted from "./pages/SessionAcceptedPage";
 import PostSessionSummary from "./pages/PostSessionSummary";
 import SessionRematching from "./pages/SessionRematchingPage";
+import RoleProtectedRoute from "./components/RoleProtectedRoute";
 
 // console.log(import.meta.env.VITE_BACKEND_URL);
 
@@ -47,7 +48,9 @@ function App() {
             path="/sessionaccept"
             element={
               <AuthenticatedRoute>
-                <SessionAccepted />
+                <RoleProtectedRoute allowedRoles={["learner", "tutor"]}>
+                  <SessionAccepted />
+                </RoleProtectedRoute>
               </AuthenticatedRoute>
             }
           />
@@ -65,7 +68,9 @@ function App() {
             path="/admin"
             element={
               <AuthenticatedRoute>
-                <AdminPage />
+                <RoleProtectedRoute allowedRoles={["admin"]}>
+                  <AdminPage />
+                </RoleProtectedRoute>
               </AuthenticatedRoute>
             }
           />
@@ -74,7 +79,9 @@ function App() {
             path="/tutor"
             element={
               <AuthenticatedRoute>
-                <AlumnaiPage />
+                <RoleProtectedRoute allowedRoles={["tutor"]}>
+                  <AlumnaiPage />
+                </RoleProtectedRoute>
               </AuthenticatedRoute>
             }
           />
@@ -83,7 +90,9 @@ function App() {
             path="/learner"
             element={
               <AuthenticatedRoute>
-                <LearnerPage />
+                <RoleProtectedRoute allowedRoles={["learner"]}>
+                  <LearnerPage />
+                </RoleProtectedRoute>
               </AuthenticatedRoute>
             }
           />
