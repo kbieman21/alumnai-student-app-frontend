@@ -13,6 +13,7 @@ import AlumnaiPage from "./pages/AlumnaiPage";
 import AdminPage from "./pages/AdminPage";
 import RquestConfirmPage from "./pages/RequestConfirmPage";
 import SessionAccepted from "./pages/SessionAcceptedPage";
+import PostSessionSummary from "./pages/PostSessionSummary";
 
 // console.log(import.meta.env.VITE_BACKEND_URL);
 
@@ -29,8 +30,9 @@ function App() {
           <Route path="/learner" element={<LearnerPage />} />
           <Route path="/tutor" element={<AlumnaiPage />} />
           <Route path="/admin" element={<AdminPage />} />
-           <Route path="/confirm" element={<RquestConfirmPage />} /> SessionAccepted
-           <Route path="/sessionaccept" element={<SessionAccepted />} /> 
+           <Route path="/confirm" element={<RquestConfirmPage />} />
+           <Route path="/sessionaccept" element={<SessionAccepted />} />  
+            <Route path="/postsession" element={<PostSessionSummary />} /> 
 
           <Route path='/projects' element={
             <AuthenticatedRoute>

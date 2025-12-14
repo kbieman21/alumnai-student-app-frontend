@@ -257,10 +257,12 @@
 
 import { useState } from "react";
  import { useNavigate } from "react-router-dom";
+ import { groq } from '@ai-sdk/groq';
+import { generateText } from 'ai';
 
 const DEMO_MODE = true; // 🔁 CHANGE TO false FOR LIVE OPENAI
 
-export default function LearnerPage() {
+export default async function LearnerPage() {
     const navigate = useNavigate();
   const [showFakeAI, setShowFakeAI] = useState(false);
   const [aiResponse, setAiResponse] = useState("");
@@ -273,7 +275,7 @@ export default function LearnerPage() {
     if (DEMO_MODE) {
       setShowFakeAI(true);
     } else {
-      getLiveAIHelp();
+      //getLiveAIHelp();
     }
   };
 
@@ -316,6 +318,7 @@ export default function LearnerPage() {
 
     setLoading(false);
   };
+
 
   return (
     <div style={styles.page}>
