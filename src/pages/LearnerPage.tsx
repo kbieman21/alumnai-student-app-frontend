@@ -256,6 +256,7 @@
 // };
 
 import React, { useState } from "react";
+import banner from "../assets/White Minimalist Simple Coming Soon Banner.png"
 
 const DEMO_MODE = true; // 🔁 CHANGE TO false FOR LIVE OPENAI
 
@@ -314,11 +315,46 @@ export default function LearnerPage() {
 
   return (
     <div style={styles.page}>
-      <h1>Welcome back, Learner 👋</h1>
-      <p>Get fast help from AI and Per Scholas alumni tutors.</p>
+
+    {/* Welcome student banner */}
+     <section className="mb-15 z-0 py-10 ">
+      <div className="mx-auto pt-10 p-9 rounded-lg " style={{backgroundImage:`url(${banner})`, backgroundRepeat:'no-repeat', backgroundSize:'contain', height: 300,width:600}}>
+        
+      <h1 className="mt-3 text-left text-black text-xl">Welcome back Learner!</h1>  
+      <p className="mt-10 text-black text-left" >███▒▒▒▒▒▒▒ 30%</p>
+    <p className="mt-20 text-black text-left">
+     Get fast help from AI and Per Scholas alumni tutors.
+    </p>
+
+      </div>
+     </section>
+
+
 
       {/* Request Help */}
-      <section style={styles.card}>
+      
+      {/* <section style={styles.card}> */}
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2">
+
+               <div className="flex flex-col rounded-lg border border-gray-200 hover:bg-white hover:border-gray-200 px-4 py-8 text-center text-black text-lg">
+
+                   <dt>Notes</dt>
+
+              </div>
+
+              <div className="flex flex-col rounded-lg border border-gray-200 hover:bg-white hover:border-gray-200 px-4 py-8 text-center text-black text-lg">
+
+                   <dt>Materials</dt>
+
+              </div>
+
+
+
+
+          </div>
+          
+
+
         <h2>Get Help Now</h2>
 
         <label>Topic / Skill</label>
@@ -346,7 +382,9 @@ export default function LearnerPage() {
         <button style={styles.primaryBtn} onClick={handleAIHelp}>
           Get AI Help
         </button>
-      </section>
+        
+        
+      {/* </section> */}
 
       {/* Demo AI Response */}
       {showFakeAI && (
@@ -400,6 +438,7 @@ export default function LearnerPage() {
   );
 }
 
+
 const styles = {
   page: {
     padding: "20px",
@@ -446,3 +485,4 @@ const styles = {
     marginTop: "10px",
   },
 };
+
