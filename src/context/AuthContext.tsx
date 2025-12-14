@@ -12,7 +12,7 @@ export const AuthContext = createContext<AuthContextType>({} as AuthContextType)
 
 export default function AuthProvider({ children }: AuthProviderProps) {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-  const [user, setUser] = useState<User>({} as User);
+  const [user, setUser] = useState<User>(null!);
 
   const navigate = useNavigate();
 
@@ -52,9 +52,9 @@ export default function AuthProvider({ children }: AuthProviderProps) {
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
-    //setUser(null);
+    setUser(null!);
     setIsAuthenticated(false);
-    navigate('/login')
+    navigate('/')
   }
   return (
     <AuthContext.Provider value={{ isAuthenticated, register, login, logout, user }}>
