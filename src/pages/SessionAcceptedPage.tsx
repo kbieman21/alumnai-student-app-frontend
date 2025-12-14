@@ -85,10 +85,10 @@ export default function SessionAccepted() {
         {/* Actions */}
         <div style={styles.buttonRow}>
           <button onClick={()=>{
-            navigate('/learner');
+            navigate('/tutor');
           }} style={styles.primaryBtn}>Return to Dashboard</button>
           <button onClick={()=>{
-            navigate('/learner');
+            navigate('/ai');
           }} style={styles.secondaryBtn}>Review AI Prep</button>
         </div>
       </div>

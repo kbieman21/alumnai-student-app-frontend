@@ -14,6 +14,8 @@ import PostSessionSummary from "./pages/PostSessionSummary";
 import SessionRematching from "./pages/SessionRematchingPage";
 import RoleProtectedRoute from "./components/RoleProtectedRoute";
 
+import AIHelperPage from "./pages/AIHelperPage";
+
 // console.log(import.meta.env.VITE_BACKEND_URL);
 
 function App() {
@@ -25,12 +27,15 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/ai" element={<AIHelperPage title="" systemPrompt="" userPrompt="" />} />
 
           <Route
             path="/declinesession"
             element={
               <AuthenticatedRoute>
+                 <RoleProtectedRoute allowedRoles={["learner", "tutor"]}>
                 <SessionRematching />
+                </RoleProtectedRoute>
               </AuthenticatedRoute>
             }
           />

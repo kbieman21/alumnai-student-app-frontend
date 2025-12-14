@@ -2,6 +2,8 @@ import { useState } from "react";
 import banner from "../assets/White Minimalist Simple Coming Soon Banner.png";
 import CommonButton from "../components/CommonButtons";
 import { useNavigate } from "react-router-dom";
+import AIHelper from "../pages/AIHelperPage";
+
 
 const DEMO_MODE = true; // 🔁 CHANGE TO false FOR LIVE OPENAI
 
@@ -119,12 +121,12 @@ export default function LearnerPage() {
         {/* <button onClick={handleAIHelp}>
           Get AI Help
         </button> */}
-        <button><CommonButton label="Get AI Help" color="gray" onClick={handleAIHelp} /></button>
+        {/* <button><CommonButton label="Get AI Help" color="gray" onClick={handleAIHelp} /></button> */}
         
       </div>
 
       {/* Demo AI Response */}
-      {showFakeAI && (
+      {/* {showFakeAI && (
         <section className="rounded-lg border border-black mt-5 mb-5">
           <h2>AI Study Assistant 🤖</h2>
           <p>
@@ -142,17 +144,23 @@ export default function LearnerPage() {
             numbers from 1 to 10.
           </p>
         </section>
-      )}
+      )} */}
 
       {/* Live AI Response */}
-      {loading && <p>AI is thinking...</p>}
+      {/* {loading && <p>AI is thinking...</p>}
 
       {aiResponse && (
         <section className="rounded-lg border border-red mt-5">
           <h2 className="mb-5">AI Study Assistant 🤖</h2>
           <p className="mb-5">{aiResponse}</p>
         </section>
-      )}
+      )} */}
+
+        <AIHelper
+  title="AI Study Assistant 🤖"
+  systemPrompt="You are a helpful and supportive tutor for Per Scholas learners. Explain concepts simply."
+  userPrompt="Explain JavaScript loops simply and give one short example."
+/>
 
       {/* Recommended Tutor */}
       <section>

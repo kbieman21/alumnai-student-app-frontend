@@ -106,7 +106,7 @@ export default function SessionConfirmation() {
              onClick={() => navigate("/learner")}
            />
           <button onClick={()=>{
-            navigate("/learner")
+            navigate("/ai")
           }} style={styles.secondaryBtn}>Get More AI Help</button>
         </div>
       </div>

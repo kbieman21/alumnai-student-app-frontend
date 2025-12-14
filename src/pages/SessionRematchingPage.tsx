@@ -64,8 +64,8 @@ export default function SessionRematching() {
 
         {/* Actions */}
         <div style={styles.buttonRow}>
-          <button onClick={() => navigate("/learner")} style={styles.primaryBtn}>Get AI Help</button>
-          <button onClick={() => navigate("/learner")} style={styles.secondaryBtn}>Return to Dashboard</button>
+          <button onClick={() => navigate("/ai")} style={styles.primaryBtn}>Get AI Help</button>
+          <button onClick={() => navigate("/tutor")} style={styles.secondaryBtn}>Return to Dashboard</button>
         </div>
       </div>
     </div>
