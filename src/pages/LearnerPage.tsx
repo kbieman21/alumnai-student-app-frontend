@@ -256,10 +256,12 @@
 // };
 
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const DEMO_MODE = true; // 🔁 CHANGE TO false FOR LIVE OPENAI
 
 export default function LearnerPage() {
+    const navigate = useNavigate();
   const [showFakeAI, setShowFakeAI] = useState(false);
   const [aiResponse, setAiResponse] = useState("");
   const [loading, setLoading] = useState(false);
@@ -386,7 +388,8 @@ export default function LearnerPage() {
           <strong>Alex R.</strong> — JavaScript Alumni Tutor
         </p>
         <p>⭐ 5.0 | 🏅 Top Mentor</p>
-        <button style={styles.secondaryBtn}>Request Session</button>
+        <button onClick={()=>{navigate('/confirm')}} style={styles.secondaryBtn}>Request Session</button>
+       
       </section>
 
       {/* Progress */}

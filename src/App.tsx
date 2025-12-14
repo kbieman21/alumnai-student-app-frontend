@@ -11,6 +11,7 @@ import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import LearnerPage from "./pages/LearnerPage";
 import AlumnaiPage from "./pages/AlumnaiPage";
 import AdminPage from "./pages/AdminPage";
+import RquestConfirmPage from "./pages/RequestConfirmPage";
 
 // console.log(import.meta.env.VITE_BACKEND_URL);
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/learner" element={<LearnerPage />} />
           <Route path="/tutor" element={<AlumnaiPage />} />
           <Route path="/admin" element={<AdminPage />} />
+           <Route path="/confirm" element={<RquestConfirmPage />} />
 
           <Route path='/projects' element={
             <AuthenticatedRoute>

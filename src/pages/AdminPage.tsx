@@ -48,9 +48,11 @@ export default function AdminPage() {
       {/* Controls */}
       <section style={styles.card}>
         <h2>Admin Controls</h2>
-        <button style={styles.primaryBtn}>Approve New Tutors</button>
-        <button style={styles.secondaryBtn}>View Feedback</button>
-        <button style={styles.secondaryBtn}>Export Reports</button>
+        <button onClick={()=>{
+                alert('Alex has been approved');
+            }}  style={styles.primaryBtn}>Approve New Tutors</button>
+        <button style={styles.secondaryBtn}>View Feedback </button>
+        <button style={styles.secondaryBtn}> Export Reports</button>
       </section>
     </div>
   );
@@ -60,5 +62,5 @@ const styles = {
   page: { padding: "20px", fontFamily: "Arial" },
   card: { background: "gray", padding: "15px", marginBottom: "20px", borderRadius: "8px" },
   primaryBtn: { padding: "10px", marginRight: "10px", background: "#4CAF50", color: "white", border: "none", borderRadius: "5px" },
-  secondaryBtn: { padding: "10px", background: "#ddd", border: "none", borderRadius: "5px" }
+  secondaryBtn: { padding: "10px", background: "gray", border: "none", borderRadius: "5px", background: "blue" }
 };

@@ -13,7 +13,8 @@ export interface Task{
 export interface User{
     username:string,
     email:string,
-    password:string
+    password:string,
+    role:string
 }
 
 export interface AuthContextType {

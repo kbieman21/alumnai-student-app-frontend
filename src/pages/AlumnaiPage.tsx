@@ -26,8 +26,12 @@ export default function TutorPage() {
             and applying them in projects.
           </p>
           <div style={styles.buttonRow}>
-            <button style={styles.primaryBtn}>Accept Session</button>
-            <button style={styles.secondaryBtn}>Decline</button>
+            <button onClick={()=>{
+                alert('Session Confirmed');
+            }}  style={styles.primaryBtn}>Accept Session</button>
+            <button onClick={()=>{
+                alert('Session Declined');
+            }} style={styles.secondaryBtn}>Decline</button>
           </div>
         </div>
       </section>
@@ -59,8 +63,8 @@ export default function TutorPage() {
 
 const styles = {
   page: { padding: "20px", fontFamily: "Arial" },
-  card: { background: "gray", padding: "15px", marginBottom: "20px", borderRadius: "8px" },
-  requestCard: { background: "white", padding: "10px", borderRadius: "5px" },
+  card: { background: "gray", padding: "15px", marginBottom: "20px", borderRadius: "8px"},
+  requestCard: { background: "gray", padding: "10px", borderRadius: "5px" },
   buttonRow: { display: "flex", gap: "10px", marginTop: "10px" },
   primaryBtn: { padding: "10px", background: "#4CAF50", color: "white", border: "none", borderRadius: "5px" },
   secondaryBtn: { padding: "10px", background: "#ddd", border: "none", borderRadius: "5px" }
