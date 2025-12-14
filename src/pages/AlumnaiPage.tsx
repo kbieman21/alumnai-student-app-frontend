@@ -1,6 +1,7 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function TutorPage() {
+    const navigate = useNavigate();
   return (
     <div style={styles.page}>
       <h1>Welcome, Tutor 🎓</h1>
@@ -27,7 +28,7 @@ export default function TutorPage() {
           </p>
           <div style={styles.buttonRow}>
             <button onClick={()=>{
-                alert('Session Confirmed');
+                navigate("/sessionaccept")
             }}  style={styles.primaryBtn}>Accept Session</button>
             <button onClick={()=>{
                 alert('Session Declined');

@@ -255,8 +255,8 @@
 //   tutorCard: { padding: "10px", background: "gray", borderRadius: "5px" },
 // };
 
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+ import { useNavigate } from "react-router-dom";
 
 const DEMO_MODE = true; // 🔁 CHANGE TO false FOR LIVE OPENAI
 
@@ -265,6 +265,9 @@ export default function LearnerPage() {
   const [showFakeAI, setShowFakeAI] = useState(false);
   const [aiResponse, setAiResponse] = useState("");
   const [loading, setLoading] = useState(false);
+
+
+
 
   const handleAIHelp = () => {
     if (DEMO_MODE) {
@@ -389,6 +392,8 @@ export default function LearnerPage() {
         </p>
         <p>⭐ 5.0 | 🏅 Top Mentor</p>
         <button onClick={()=>{navigate('/confirm')}} style={styles.secondaryBtn}>Request Session</button>
+       
+
        
       </section>
 
