@@ -75,17 +75,16 @@ const styles = {
 	},
 	secondaryBtn: {
 		padding: "10px",
-		background: "gray",
+		background: "red",
 		border: "none",
 		borderRadius: "5px",
-    background: "red",
     margin: "5px"
 	},
 	thirdBTn: {
 		padding: "10px",
-		background: "gray",
+		background: "blue",
 		border: "none",
 		borderRadius: "5px",
-		background: "yellow",
+		
 	},
 };
