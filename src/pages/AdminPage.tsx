@@ -68,6 +68,9 @@ export default function AdminPage() {
             navigate('/tutor');
           }} style={styles.thirdBTn}> Export Reports</button>
       </section>
+       <button onClick={()=>{
+            navigate('/postsession');
+          }} style={styles.secondaryBtn}>Session Completed </button>
     </div>
   );
 }
@@ -92,7 +95,7 @@ const styles = {
     padding: "10px",
     border: "none",
     borderRadius: "5px",
-    background: "blue",
+    background: "lightblue",
     margin: "5px",
   },
   thirdBTn: {
