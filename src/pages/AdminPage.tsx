@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function AdminPage() {
+  const navigate = useNavigate();
   return (
     <div style={styles.page}>
       <h1>Admin Dashboard</h1>
@@ -58,8 +61,12 @@ export default function AdminPage() {
         >
           Approve New Tutors
         </button>
-        <button style={styles.secondaryBtn}>View Feedback </button>
-        <button style={styles.thirdBTn}> Export Reports</button>
+        <button onClick={()=>{
+            navigate('/learner');
+          }} style={styles.secondaryBtn}>View Feedback </button>
+        <button onClick={()=>{
+            navigate('/tutor');
+          }} style={styles.thirdBTn}> Export Reports</button>
       </section>
     </div>
   );
