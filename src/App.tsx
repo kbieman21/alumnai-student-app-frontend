@@ -1,12 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import HomePage from "./pages/HomePage";
-import ProjectsPage from "./pages/ProjectsPage";
 import NavBar from "./components/NavBar";
-import ProjectDetailsPage from "./pages/ProjectDetailsPage";
 import RegisterPage from "./pages/RegisterPage";
 import LoginPage from "./pages/LoginPage";
-import TaskPage from "./pages/TaskPage";
 import AuthenticatedRoute from "./components/AuthenticatedRoute";
 import LearnerPage from "./pages/LearnerPage";
 import AlumnaiPage from "./pages/AlumnaiPage";
@@ -21,44 +18,75 @@ import SessionRematching from "./pages/SessionRematchingPage";
 function App() {
   return (
     <>
-     <NavBar />
+      <NavBar />
       <div className="min-h-screen flex flex-col justify-center bg-sky-500 text-white">
-       
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/learner" element={<LearnerPage />} />
-          <Route path="/tutor" element={<AlumnaiPage />} />
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="/confirm" element={<RquestConfirmPage />} />
-          <Route path="/sessionaccept" element={<SessionAccepted />} />  
-          <Route path="/postsession" element={<PostSessionSummary />} /> 
-          <Route path="/declinesession" element={<SessionRematching />} /> 
 
-          <Route path='/projects' element={
-            <AuthenticatedRoute>
-            <ProjectsPage/> 
-            </AuthenticatedRoute>
-          }
+          <Route
+            path="/declinesession"
+            element={
+              <AuthenticatedRoute>
+                <SessionRematching />
+              </AuthenticatedRoute>
+            }
           />
-          {/* <Route path="/projects" element={<ProjectsPage />} /> */}
 
-          <Route path='/projects/:projectId' element={ 
-            <AuthenticatedRoute>
-            <ProjectDetailsPage/>
-            </AuthenticatedRoute>
-          }
+          <Route
+            path="/postsession"
+            element={
+              <AuthenticatedRoute>
+                <PostSessionSummary />
+              </AuthenticatedRoute>
+            }
           />
-          {/* <Route path="/projects/:projectId" element={<ProjectDetailsPage />} /> */}
 
-          <Route path='/projects/:projectId/tasks/:taskId' element={ 
-            <AuthenticatedRoute>
-            <TaskPage/>
-            </AuthenticatedRoute>
-          }
+          <Route
+            path="/sessionaccept"
+            element={
+              <AuthenticatedRoute>
+                <SessionAccepted />
+              </AuthenticatedRoute>
+            }
           />
-          {/* <Route path="/projects/:projectId/tasks/:taskId" element={<TaskPage />} /> */}
+
+          <Route
+            path="/confirm"
+            element={
+              <AuthenticatedRoute>
+                <RquestConfirmPage />
+              </AuthenticatedRoute>
+            }
+          />
+
+          <Route
+            path="/admin"
+            element={
+              <AuthenticatedRoute>
+                <AdminPage />
+              </AuthenticatedRoute>
+            }
+          />
+
+          <Route
+            path="/tutor"
+            element={
+              <AuthenticatedRoute>
+                <AlumnaiPage />
+              </AuthenticatedRoute>
+            }
+          />
+
+          <Route
+            path="/learner"
+            element={
+              <AuthenticatedRoute>
+                <LearnerPage />
+              </AuthenticatedRoute>
+            }
+          />
         </Routes>
       </div>
     </>
