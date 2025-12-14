@@ -1,65 +1,15 @@
-import { useState } from "react";
+
 import banner from "../assets/White Minimalist Simple Coming Soon Banner.png";
 import CommonButton from "../components/CommonButtons";
 import { useNavigate } from "react-router-dom";
 import AIHelper from "../pages/AIHelperPage";
 
 
-const DEMO_MODE = true; // 🔁 CHANGE TO false FOR LIVE OPENAI
+
 
 export default function LearnerPage() {
     const navigate = useNavigate();
-  const [showFakeAI, setShowFakeAI] = useState(false);
-  const [aiResponse, setAiResponse] = useState("");
-  const [loading, setLoading] = useState(false);
-
-  const handleAIHelp = () => {
-    if (DEMO_MODE) {
-      setShowFakeAI(true);
-    } else {
-      getLiveAIHelp();
-    }
-  };
-
-  const getLiveAIHelp = async () => {
-    setLoading(true);
-    setAiResponse("");
-
-    try {
-      const response = await fetch(
-        "https://api.openai.com/v1/chat/completions",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`,
-          },
-          body: JSON.stringify({
-            model: "gpt-4o-mini",
-            messages: [
-              {
-                role: "system",
-                content:
-                  "You are a helpful and supportive tutor for Per Scholas learners. Explain concepts simply.",
-              },
-              {
-                role: "user",
-                content:
-                  "Explain JavaScript loops simply and give one short example.",
-              },
-            ],
-          }),
-        }
-      );
-
-      const data = await response.json();
-      setAiResponse(data.choices[0].message.content);
-    } catch (error) {
-      setAiResponse("AI is currently unavailable. Please try again later.");
-    }
-
-    setLoading(false);
-  };
+  
 
   return (
     <div>
