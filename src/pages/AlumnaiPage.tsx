@@ -35,7 +35,7 @@ export default function TutorPage() {
                 navigate("/sessionaccept")
             }}  style={styles.primaryBtn} >Accept Session</button>
             <button onClick={()=>{
-                alert('Session Declined');
+                navigate("/declinesession")
             }} style={styles.secondaryBtn}>Decline</button>
           </div>
         </div>

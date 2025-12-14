@@ -1,6 +1,7 @@
-import React from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function SessionAccepted() {
+    const navigate = useNavigate();
   return (
     <div style={styles.page}>
       <div style={styles.card}>
@@ -83,8 +84,12 @@ export default function SessionAccepted() {
 
         {/* Actions */}
         <div style={styles.buttonRow}>
-          <button style={styles.primaryBtn}>Return to Dashboard</button>
-          <button style={styles.secondaryBtn}>Review AI Prep</button>
+          <button onClick={()=>{
+            navigate('/learner');
+          }} style={styles.primaryBtn}>Return to Dashboard</button>
+          <button onClick={()=>{
+            navigate('/learner');
+          }} style={styles.secondaryBtn}>Review AI Prep</button>
         </div>
       </div>
     </div>

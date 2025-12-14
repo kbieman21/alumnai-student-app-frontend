@@ -14,6 +14,7 @@ import AdminPage from "./pages/AdminPage";
 import RquestConfirmPage from "./pages/RequestConfirmPage";
 import SessionAccepted from "./pages/SessionAcceptedPage";
 import PostSessionSummary from "./pages/PostSessionSummary";
+import SessionRematching from "./pages/SessionRematchingPage";
 
 // console.log(import.meta.env.VITE_BACKEND_URL);
 
@@ -33,6 +34,7 @@ function App() {
           <Route path="/confirm" element={<RquestConfirmPage />} />
           <Route path="/sessionaccept" element={<SessionAccepted />} />  
           <Route path="/postsession" element={<PostSessionSummary />} /> 
+          <Route path="/declinesession" element={<SessionRematching />} /> 
 
           <Route path='/projects' element={
             <AuthenticatedRoute>
