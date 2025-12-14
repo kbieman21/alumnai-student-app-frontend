@@ -79,12 +79,12 @@ function LoginPage() {
   }, [user, navigate]);
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="min-h-screen flex items-center justify-center bg-sky-500 ">
       <div>
         <h2 className="text-3xl mb-6 font-bold">Login</h2>
 
-        <form className="w-80 space-y-4" onSubmit={handleSubmit}>
-          <input
+        <form className="w-80 space-y-4 " onSubmit={handleSubmit}>
+          <input 
             name="email"
             placeholder="Email"
             onChange={handleChange}
@@ -100,7 +100,7 @@ function LoginPage() {
             className="w-full p-3 border rounded"
           />
 
-          <button className="w-full p-3 bg-blue-600 text-white rounded">
+          <button className="w-full p-3 bg-gray-600 text-white rounded">
             Login
           </button>
         </form>

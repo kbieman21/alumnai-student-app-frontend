@@ -2,6 +2,7 @@ import React from "react";
 
 export default function PostSessionSummary() {
   return (
+    
     <div style={styles.page}>
       <div style={styles.card}>
         <h1>✅ Session Complete!</h1>
@@ -72,13 +73,14 @@ export default function PostSessionSummary() {
         </div>
       </div>
     </div>
+    
   );
 }
 
 const styles = {
   page: {
     minHeight: "100vh",
-    background: "#f2f4f8",
+    background: "oklch(68.5% 0.169 237.323)",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -92,9 +94,10 @@ const styles = {
     padding: "28px",
     borderRadius: "12px",
     boxShadow: "0 6px 15px rgba(0,0,0,0.1)",
+    color:'black'
   },
   subtitle: {
-    color: "#555",
+    color: "#060606ff",
     marginBottom: "10px",
   },
   divider: {

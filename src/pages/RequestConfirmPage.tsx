@@ -115,7 +115,7 @@ export default function SessionConfirmation() {
 const styles = {
   page: {
     minHeight: "100vh",
-    background: "gray",
+    background: "oklch(68.5% 0.169 237.323)",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -123,15 +123,16 @@ const styles = {
     fontFamily: "Arial, sans-serif",
   },
   card: {
-    background: "gray",
+    background: "white",
     maxWidth: "600px",
     width: "100%",
     padding: "25px",
     borderRadius: "10px",
     boxShadow: "0 4px 10px rgba(0,0,0,0.1)",
+    color: 'black'
   },
   subtitle: {
-    color: "#555",
+    color: "#9699a0ff",
     marginBottom: "10px",
   },
   divider: {
@@ -140,13 +141,13 @@ const styles = {
     borderTop: "1px solid #eee",
   },
   aiBox: {
-    background: "gray",
+    background: "lightgray",
     padding: "12px",
     borderRadius: "6px",
     fontStyle: "italic",
   },
   rewardBox: {
-    background: "gray",
+    background: "lightgray",
     padding: "12px",
     borderRadius: "6px",
   },

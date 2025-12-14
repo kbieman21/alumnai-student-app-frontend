@@ -94,7 +94,7 @@ export default function SessionAccepted() {
 const styles = {
   page: {
     minHeight: "100vh",
-    background: "#f2f4f8",
+    background: "oklch(68.5% 0.169 237.323)",
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
@@ -108,6 +108,7 @@ const styles = {
     padding: "28px",
     borderRadius: "12px",
     boxShadow: "0 6px 15px rgba(0,0,0,0.1)",
+    color:'black'
   },
   subtitle: {
     color: "#555",

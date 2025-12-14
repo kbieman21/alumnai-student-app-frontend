@@ -9,7 +9,7 @@ export default function AdminPage() {
 			{/* Overview */}
 			<section style={styles.card}>
 				<h2>platform activity</h2>
-				<table class="table-fixed">
+				<table className="table-fixed">
 					<thead>
 						<tr>
 							<th>Active Tutors:</th>
@@ -88,10 +88,12 @@ export default function AdminPage() {
 	);
 }
 
+
 const styles = {
-	page: { padding: "20px", fontFamily: "Arial" },
+	body: { background: 'bg-sky-500' },
+	page: { padding: "20px", fontFamily: "Arial", color:'black' },
 	card: {
-		background: "gray",
+		background: "white",
 		padding: "15px",
 		marginBottom: "20px",
 		borderRadius: "8px",
