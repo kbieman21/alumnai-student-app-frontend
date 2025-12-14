@@ -70,7 +70,7 @@ export default function AdminPage() {
       </section>
        <button onClick={()=>{
             navigate('/postsession');
-          }} style={styles.secondaryBtn}>Session Completed </button>
+          }} style={styles.secondaryBtn} className="ml-11">Session Completed </button>
     </div>
   );
 }
