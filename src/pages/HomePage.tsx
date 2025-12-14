@@ -5,10 +5,7 @@ function HomePage() {
   //const navigate = useNavigate();
   return (
 		<div>
-			<h1
-				className="text-5xl font-bold mb-4 font-size: var(--text-2xl)">
-				Project Manager App
-			</h1>
+			<h1 className="text-5xl font-bold mb-4"> PeerTrack+ APP</h1>
 
 			<p className="text-gray-300 text-lg mb-8">Hello placeholder</p>
 
