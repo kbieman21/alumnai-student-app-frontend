@@ -1,3 +1,8 @@
+## GIF
+![](https://github.com/kbieman21/alumnai-student-app-frontend/blob/941ecbfb129317284e22f00c4352c4864b85469f/Video%20Project%20gif.gif)
+
+
+
 # Repo Collaborators:
 Kibreab Solomon
 ROLE:TEAM TECH LEAD, FULL STACK DEVELOPER, AI ARCHITECT
@@ -80,7 +85,4 @@ FOUNDATION:
 
 —--- This is the end
 
-
-## GIF
-![](https://github.com/kbieman21/alumnai-student-app-frontend/blob/941ecbfb129317284e22f00c4352c4864b85469f/Video%20Project%20gif.gif)
 
