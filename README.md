@@ -82,7 +82,5 @@ FOUNDATION:
 
 
 ## GIF
-
-
-[GIF](https://drive.google.com/file/d/1z3q1lGhXqC6qq3hhgLIl-_IBkGEQj7I1/view?usp=sharing)
+![](https://github.com/kbieman21/alumnai-student-app-frontend/blob/941ecbfb129317284e22f00c4352c4864b85469f/Video%20Project%20gif.gif)
 
