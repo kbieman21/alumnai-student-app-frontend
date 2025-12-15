@@ -15,7 +15,10 @@ function NavBar() {
           <NavLink to="/" className="hover:text-sky-400 transition">
            <img src={logo} alt="Logo" className="h-10 w-auto" />
           </NavLink>
+          <h1>PeerTrack+</h1>
+         
         </div>
+        
 
         
 
