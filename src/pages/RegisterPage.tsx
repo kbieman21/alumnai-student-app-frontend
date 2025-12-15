@@ -9,6 +9,9 @@ function RegisterPage() {
   const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
     setForm({ ...form, [e.target.name]: e.target.value });
 
+  const handleSelect = (e: ChangeEvent<HTMLSelectElement>) =>
+    setForm({ ...form, [e.target.name]: e.target.value });
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     //
     e.preventDefault();
@@ -16,7 +19,7 @@ function RegisterPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
+    <div className="min-h-screen flex items-center justify-center bg-sky-500">
       <div>
         <h2 className="text-3xl mb-6 font-bold">Create an Account</h2>
 
@@ -47,9 +50,9 @@ function RegisterPage() {
           <div>
             <select
               name="role"
-              onChange={handleChange}
+              onChange={handleSelect}
               required
-              className="w-full p-3 border rounded bg-gray-900"
+              className="w-full p-3 border rounded bg-sky-900"
             >
               <option value="">Select a role</option>
               <option value="learner">Learner</option>
