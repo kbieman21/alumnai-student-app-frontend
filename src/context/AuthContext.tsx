@@ -60,6 +60,8 @@ export default function AuthProvider({ children }: AuthProviderProps) {
   }
   };
 
+
+
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');
