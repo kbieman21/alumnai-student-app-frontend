@@ -53,8 +53,10 @@ export default function AuthProvider({ children }: AuthProviderProps) {
     navigate("/admin");
   } else if (user.role === "tutor") {
     navigate("/tutor");
-  } else {
+  } else if(user.role === "learner") {
     navigate("/learner");
+  }else{
+    navigate("/");
   }
   };
 
