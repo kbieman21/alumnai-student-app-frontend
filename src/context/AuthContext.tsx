@@ -58,6 +58,8 @@ export default function AuthProvider({ children }: AuthProviderProps) {
   }
   };
 
+
+//when you logout, token, user, role
   const logout = () => {
     localStorage.removeItem('token');
     localStorage.removeItem('user');

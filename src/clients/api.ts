@@ -8,7 +8,7 @@ export const apiClient = axios.create({
   // },
 });
 
-
+//once you login, token will active
 //I need to inject token dynamically after login so i need to add interceptor to attach token automatically
 apiClient.interceptors.request.use((config) => {
   const token = localStorage.getItem("token");
